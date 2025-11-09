@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizlilik Politikası</title>
+    <title>QuickScan PDF - Gizlilik Politikası</title>
     <style>
         * {
             margin: 0;
@@ -12,92 +12,216 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            min-height: 100vh;
+            background-color: #ffffff;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            overflow: hidden;
         }
         
         header {
-            border-bottom: 3px solid #4a90e2;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px 40px;
+            text-align: center;
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
         h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .app-subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-weight: 300;
         }
         
         .last-updated {
-            color: #7f8c8d;
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
             font-size: 0.9em;
+            margin-top: 15px;
+        }
+        
+        .content {
+            padding: 50px 40px;
+        }
+        
+        .intro-box {
+            background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .intro-box p {
+            font-size: 1.1em;
+            color: #2c3e50;
+            line-height: 1.8;
         }
         
         h2 {
-            color: #34495e;
-            font-size: 1.8em;
-            margin-top: 40px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #ecf0f1;
+            color: #667eea;
+            font-size: 1.9em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #e8e8e8;
+            font-weight: 700;
+        }
+        
+        h2:first-of-type {
+            margin-top: 20px;
         }
         
         h3 {
             color: #555;
-            font-size: 1.3em;
-            margin-top: 25px;
-            margin-bottom: 10px;
+            font-size: 1.35em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
         
         p {
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             text-align: justify;
+            font-size: 1.05em;
         }
         
         ul {
-            margin-left: 30px;
-            margin-bottom: 15px;
+            margin-left: 35px;
+            margin-bottom: 20px;
         }
         
         li {
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            padding-left: 10px;
+            font-size: 1.05em;
+        }
+        
+        li strong {
+            color: #667eea;
+        }
+        
+        .highlight-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .info-box {
+            background-color: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 5px;
         }
         
         .contact-box {
-            background-color: #f8f9fa;
-            border-left: 4px solid #4a90e2;
-            padding: 20px;
-            margin-top: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            margin-top: 50px;
+            border-radius: 10px;
+            text-align: center;
         }
         
         .contact-box h3 {
             margin-top: 0;
-            color: #4a90e2;
+            color: white;
+            font-size: 1.8em;
+            margin-bottom: 20px;
         }
         
-        a {
-            color: #4a90e2;
+        .contact-box p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        
+        .contact-box a {
+            color: #fff;
             text-decoration: none;
+            padding: 12px 30px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.3s;
+            font-weight: 600;
         }
         
-        a:hover {
-            text-decoration: underline;
+        .contact-box a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+            font-size: 0.95em;
+        }
+        
+        .section-icon {
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 1.2em;
         }
         
         @media (max-width: 768px) {
+            body {
+                padding: 10px 0;
+            }
+            
             .container {
-                padding: 20px 15px;
+                border-radius: 0;
+            }
+            
+            header {
+                padding: 40px 25px;
+            }
+            
+            .content {
+                padding: 30px 25px;
             }
             
             h1 {
@@ -105,7 +229,15 @@
             }
             
             h2 {
-                font-size: 1.5em;
+                font-size: 1.6em;
+            }
+            
+            .intro-box, .contact-box {
+                padding: 20px;
+            }
+            
+            footer {
+                padding: 25px 20px;
             }
         }
     </style>
@@ -113,99 +245,214 @@
 <body>
     <div class="container">
         <header>
-            <h1>Gizlilik Politikası</h1>
-            <p class="last-updated">Son Güncelleme: 9 Kasım 2025</p>
+            <div class="app-icon">📄</div>
+            <h1>QuickScan PDF</h1>
+            <p class="app-subtitle">Gizlilik Politikası</p>
+            <span class="last-updated">Son Güncelleme: 9 Kasım 2025</span>
         </header>
 
-        <section>
-            <p>Bu gizlilik politikası, hizmetimizi kullanırken toplanan, kullanılan ve paylaşılan kişisel bilgilerinizin nasıl işlendiğini açıklamaktadır.</p>
-        </section>
+        <div class="content">
+            <div class="intro-box">
+                <p><strong>QuickScan PDF</strong>, kullanıcılarının gizliliğine önem veren, cihaz üzerinde çalışan bir belge tarama ve PDF dönüştürme uygulamasıdır. Bu gizlilik politikası, uygulamamızı kullanırken hangi bilgilerin toplandığını, nasıl kullanıldığını ve haklarınızı açıklamaktadır.</p>
+            </div>
 
-        <section>
-            <h2>1. Toplanan Bilgiler</h2>
-            <p>Hizmetimizi kullanırken aşağıdaki bilgiler toplanabilir:</p>
-            <ul>
-                <li><strong>Kişisel Bilgiler:</strong> Ad, e-posta adresi gibi kimliğinizi belirleyebilecek bilgiler</li>
-                <li><strong>Kullanım Verileri:</strong> IP adresi, tarayıcı türü, ziyaret edilen sayfalar, ziyaret süresi gibi otomatik olarak toplanan bilgiler</li>
-                <li><strong>Çerezler:</strong> Tarayıcınızda saklanan küçük veri dosyaları</li>
-            </ul>
-        </section>
+            <div class="success-box">
+                <p><strong>🔒 Güvenlik Taahhüdü:</strong> QuickScan PDF, tüm belge işlemlerini CİHAZINIZDA gerçekleştirir. Taradığınız belgeler, fotoğraflar veya PDF'ler hiçbir sunucuya yüklenmez ve üçüncü taraflarla paylaşılmaz.</p>
+            </div>
 
-        <section>
-            <h2>2. Bilgilerin Kullanımı</h2>
-            <p>Toplanan bilgiler aşağıdaki amaçlarla kullanılır:</p>
-            <ul>
-                <li>Hizmetlerimizi sağlamak ve sürdürmek</li>
-                <li>Kullanıcı deneyimini geliştirmek</li>
-                <li>İletişim kurmak ve destek sağlamak</li>
-                <li>Güvenlik ve dolandırıcılığı önlemek</li>
-                <li>Yasal yükümlülükleri yerine getirmek</li>
-            </ul>
-        </section>
+            <section>
+                <h2><span class="section-icon">📋</span>1. Toplanan Bilgiler</h2>
+                
+                <h3>1.1. Kişisel Olmayan Bilgiler</h3>
+                <p>Uygulamamız aşağıdaki bilgileri toplayabilir:</p>
+                <ul>
+                    <li><strong>Cihaz Bilgileri:</strong> Cihaz modeli, işletim sistemi sürümü, uygulama sürümü</li>
+                    <li><strong>Kullanım İstatistikleri:</strong> Özellik kullanım sıklığı, uygulama çökme raporları (anonim)</li>
+                    <li><strong>Teknik Loglar:</strong> Hata ayıklama ve performans iyileştirme için anonim teknik veriler</li>
+                </ul>
 
-        <section>
-            <h2>3. Çerezler ve İzleme Teknolojileri</h2>
-            <p>Web sitemiz, kullanıcı deneyimini iyileştirmek için çerezler kullanmaktadır. Çerezler şunlar için kullanılır:</p>
-            <ul>
-                <li>Oturum bilgilerini hatırlamak</li>
-                <li>Kullanıcı tercihlerini kaydetmek</li>
-                <li>Site trafiğini analiz etmek</li>
-            </ul>
-            <p>Tarayıcı ayarlarınızdan çerezleri devre dışı bırakabilirsiniz, ancak bu bazı özelliklerin çalışmamasına neden olabilir.</p>
-        </section>
+                <h3>1.2. İşlenen Veriler (Cihazda)</h3>
+                <p>Uygulama kullanımı sırasında aşağıdaki veriler CİHAZINIZDA işlenir ancak sunucularımıza GÖNDERİLMEZ:</p>
+                <ul>
+                    <li><strong>Kamera Görüntüleri:</strong> Belge tarama için çekilen fotoğraflar</li>
+                    <li><strong>Galeri Görselleri:</strong> PDF'e dönüştürmek için seçtiğiniz görseller</li>
+                    <li><strong>Taranmış Belgeler:</strong> Oluşturulan PDF dosyaları</li>
+                    <li><strong>OCR Metinleri:</strong> Google ML Kit ile cihazda tanınan metinler</li>
+                    <li><strong>Geçmiş Kayıtları:</strong> Dönüşüm geçmişi (yalnızca cihazınızda saklanır)</li>
+                </ul>
 
-        <section>
-            <h2>4. Bilgilerin Paylaşımı</h2>
-            <p>Kişisel bilgileriniz aşağıdaki durumlar dışında üçüncü taraflarla paylaşılmaz:</p>
-            <ul>
-                <li>Açık izniniz olduğunda</li>
-                <li>Yasal zorunluluklar gereği</li>
-                <li>Hizmet sağlayıcılarımızla (sadece gerekli olduğu ölçüde)</li>
-            </ul>
-        </section>
+                <div class="info-box">
+                    <p><strong>ℹ️ Önemli Not:</strong> Yukarıdaki tüm belgeler ve görüntüler yalnızca cihazınızda saklanır. Bulut depolamaya yedeklemeyi siz manuel olarak etkinleştirmediğiniz sürece, hiçbir veri çevrimiçi ortamda depolanmaz.</p>
+                </div>
+            </section>
 
-        <section>
-            <h2>5. Üçüncü Taraf Hizmetleri</h2>
-            <p>Hizmetimiz, kendi gizlilik politikalarına sahip üçüncü taraf hizmetleri içerebilir:</p>
-            <ul>
-                <li>Google Analytics (analitik)</li>
-                <li>Bulut depolama sağlayıcıları</li>
-            </ul>
-            <p>Bu hizmetlerin gizlilik politikalarını incelemenizi öneririz.</p>
-        </section>
+            <section>
+                <h2><span class="section-icon">🔧</span>2. İzinler ve Kullanım Amaçları</h2>
+                <p>Uygulamamız aşağıdaki izinleri talep eder:</p>
+                
+                <ul>
+                    <li><strong>📷 Kamera (CAMERA):</strong> Belge tarama ve kimlik kartı tarama özelliği için gereklidir</li>
+                    <li><strong>🖼️ Medya/Fotoğraf Erişimi (READ_MEDIA_IMAGES):</strong> Galerinizden görsel seçerek PDF oluşturmanız için gereklidir</li>
+                    <li><strong>💾 Depolama Alanı (READ/WRITE_EXTERNAL_STORAGE):</strong> Oluşturulan PDF dosyalarını kaydetmek ve paylaşmak için gereklidir (Android 9 ve altı)</li>
+                </ul>
 
-        <section>
-            <h2>6. Veri Güvenliği</h2>
-            <p>Kişisel bilgilerinizin güvenliğini sağlamak için endüstri standardı güvenlik önlemleri alıyoruz. Ancak, internet üzerinden veri iletiminin tamamen güvenli olduğunu garanti edemeyiz.</p>
-        </section>
+                <div class="highlight-box">
+                    <p><strong>⚠️ İzin Reddi:</strong> Bu izinleri vermezseniz, ilgili özellikler çalışmayacaktır. Ancak uygulamanın diğer fonksiyonlarını kullanmaya devam edebilirsiniz.</p>
+                </div>
+            </section>
 
-        <section>
-            <h2>7. Çocukların Gizliliği</h2>
-            <p>Hizmetimiz 13 yaşından küçük çocuklara yönelik değildir. Bilerek 13 yaşından küçük çocuklardan kişisel bilgi toplamayız.</p>
-        </section>
+            <section>
+                <h2><span class="section-icon">🔐</span>3. Veri İşleme ve Güvenlik</h2>
+                
+                <h3>3.1. Yerel İşleme (On-Device Processing)</h3>
+                <p>QuickScan PDF, tüm belge işlemlerini cihazınızda gerçekleştirir:</p>
+                <ul>
+                    <li>Taramalar <strong>Google ML Kit Document Scanner</strong> kullanılarak cihazda yapılır</li>
+                    <li>OCR (metin tanıma) <strong>Google ML Kit Text Recognition</strong> ile cihazda işlenir</li>
+                    <li>PDF dönüşümleri <strong>Apache PDFBox</strong> kütüphanesi ile cihazda gerçekleştirilir</li>
+                    <li>Hiçbir belge veya görüntü uzak sunuculara yüklenmez</li>
+                </ul>
 
-        <section>
-            <h2>8. Kullanıcı Hakları</h2>
-            <p>KVKK ve GDPR kapsamında aşağıdaki haklara sahipsiniz:</p>
-            <ul>
-                <li>Kişisel verilerinize erişim hakkı</li>
-                <li>Verilerin düzeltilmesini talep etme hakkı</li>
-                <li>Verilerin silinmesini isteme hakkı</li>
-                <li>Veri işlemeye itiraz etme hakkı</li>
-                <li>Veri taşınabilirliği hakkı</li>
-            </ul>
-        </section>
+                <h3>3.2. Veri Saklama</h3>
+                <ul>
+                    <li><strong>Uygulama Verileri:</strong> Tüm PDF'ler ve geçmiş kayıtları cihazın dahili hafızasında saklanır</li>
+                    <li><strong>Ayarlar:</strong> Dil tercihi, karanlık mod gibi ayarlar DataStore ile cihazda tutulur</li>
+                    <li><strong>Bulut Yedekleme (Opsiyonel):</strong> Etkinleştirirseniz, PDF'ler Downloads klasörüne kaydedilir ve Google Drive gibi bulut hizmetleriniz otomatik senkronize edebilir</li>
+                </ul>
 
-        <section>
-            <h2>9. Değişiklikler</h2>
-            <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Değişiklikler bu sayfada yayınlanacak ve "Son Güncelleme" tarihi değiştirilecektir.</p>
-        </section>
+                <h3>3.3. Veri Silme</h3>
+                <p>Tüm verileriniz cihazınızdadır ve şu yöntemlerle silebilirsiniz:</p>
+                <ul>
+                    <li>Uygulama içinden geçmişi temizleme</li>
+                    <li>Dosya yöneticisinden PDF'leri manuel silme</li>
+                    <li>Uygulamayı kaldırma (tüm veriler silinir)</li>
+                </ul>
+            </section>
 
-        <div class="contact-box">
-            <h3>10. İletişim</h3>
-            <p>Gizlilik politikamız hakkında sorularınız varsa, lütfen bizimle iletişime geçin:</p>
-            <p><strong>E-posta:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+            <section>
+                <h2><span class="section-icon">🌐</span>4. Üçüncü Taraf Hizmetleri</h2>
+                
+                <h3>4.1. Google Play Services</h3>
+                <p>Uygulama aşağıdaki Google hizmetlerini kullanır:</p>
+                <ul>
+                    <li><strong>Google ML Kit Document Scanner:</strong> Cihazda belge tarama</li>
+                    <li><strong>Google ML Kit Text Recognition:</strong> Cihazda metin tanıma (OCR)</li>
+                    <li><strong>Google AdMob:</strong> Uygulama içi reklamlar (detaylar aşağıda)</li>
+                </ul>
+                <p>Google Play Services gizlilik politikası: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+
+                <h3>4.2. Reklamlar (AdMob)</h3>
+                <p>Uygulamamız ücretsiz olarak sunulmakta ve gelir elde etmek için Google AdMob reklamları göstermektedir:</p>
+                <ul>
+                    <li>AdMob, size özelleştirilmiş reklamlar göstermek için reklam tanımlayıcınızı (Advertising ID) kullanabilir</li>
+                    <li>AdMob, cihaz bilgileri, IP adresi ve kullanım verilerini toplayabilir</li>
+                    <li>Kişiselleştirilmiş reklamları cihazınızın ayarlarından devre dışı bırakabilirsiniz</li>
+                </ul>
+                <p>Google AdMob gizlilik politikası: <a href="https://support.google.com/admob/answer/6128543" target="_blank">https://support.google.com/admob/answer/6128543</a></p>
+
+                <div class="highlight-box">
+                    <p><strong>🎯 Reklam Tercihleriniz:</strong> Android Ayarlar → Google → Reklamlar menüsünden "Reklam kişiselleştirmeyi devre dışı bırak" seçeneğini kullanabilirsiniz.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2><span class="section-icon">🚫</span>5. Paylaşılmayan Bilgiler</h2>
+                <p>QuickScan PDF aşağıdakileri <strong>KESİNLİKLE TOPLAMAZ veya PAYLAŞMAZ:</strong></p>
+                <ul>
+                    <li>❌ Taradığınız belgelerin içeriği</li>
+                    <li>❌ Kimlik kartı, pasaport gibi kişisel belgeler</li>
+                    <li>❌ Fotoğraflarınız ve galeri içeriğiniz</li>
+                    <li>❌ İletişim bilgileriniz (ad, telefon, e-posta)</li>
+                    <li>❌ Konum verileriniz</li>
+                    <li>❌ Ödeme bilgileriniz (uygulama tamamen ücretsizdir)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="section-icon">👨‍👩‍👧‍👦</span>6. Çocukların Gizliliği</h2>
+                <p>QuickScan PDF, 13 yaşından küçük çocuklardan bilerek veri toplamaz. Eğer 13 yaşından küçük bir çocuğun verilerinin toplandığını fark ederseniz, lütfen bizimle iletişime geçin.</p>
+            </section>
+
+            <section>
+                <h2><span class="section-icon">⚖️</span>7. Yasal Uyumluluk</h2>
+                
+                <h3>7.1. KVKK (Kişisel Verilerin Korunması Kanunu)</h3>
+                <p>Türkiye Cumhuriyeti vatandaşları için KVKK kapsamındaki haklarınız:</p>
+                <ul>
+                    <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                    <li>İşlenmişse bilgi talep etme</li>
+                    <li>Verilerin eksik/yanlış işlenmişse düzeltilmesini isteme</li>
+                    <li>Verilerin silinmesini talep etme</li>
+                    <li>İşlenen verilerin üçüncü kişilere aktarılıp aktarılmadığını öğrenme</li>
+                </ul>
+
+                <h3>7.2. GDPR (General Data Protection Regulation)</h3>
+                <p>Avrupa Birliği vatandaşları için GDPR kapsamındaki haklarınız:</p>
+                <ul>
+                    <li><strong>Erişim Hakkı:</strong> Hangi verilerin işlendiğini öğrenme</li>
+                    <li><strong>Düzeltme Hakkı:</strong> Yanlış verilerin düzeltilmesini isteme</li>
+                    <li><strong>Silme Hakkı (Unutulma Hakkı):</strong> Verilerinizin silinmesini talep etme</li>
+                    <li><strong>Kısıtlama Hakkı:</strong> Veri işlemenin durdurulmasını isteme</li>
+                    <li><strong>Taşınabilirlik Hakkı:</strong> Verilerinizi başka bir hizmete aktarma</li>
+                    <li><strong>İtiraz Hakkı:</strong> Veri işlemeye itiraz etme</li>
+                </ul>
+
+                <div class="info-box">
+                    <p><strong>ℹ️ Not:</strong> Uygulamamız verilerinizi sunucularımızda saklamadığından, veriler zaten tamamen sizin kontrolünüzdedir. Uygulamayı sildiğinizde tüm veriler otomatik olarak silinir.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2><span class="section-icon">🔄</span>8. Politika Güncellemeleri</h2>
+                <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Değişiklikler:</p>
+                <ul>
+                    <li>Bu sayfada yayınlanacak ve "Son Güncelleme" tarihi değiştirilecektir</li>
+                    <li>Önemli değişikliklerde uygulama içi bildirim gösterilecektir</li>
+                    <li>E-posta bildirimi <strong>gönderilmeyecektir</strong> (e-posta adresinizi toplamadığımız için)</li>
+                </ul>
+                <p>Politikayı düzenli olarak kontrol etmenizi öneririz.</p>
+            </section>
+
+            <section>
+                <h2><span class="section-icon">🛡️</span>9. Güvenlik Önlemleri</h2>
+                <p>Verilerinizin güvenliği için aldığımız önlemler:</p>
+                <ul>
+                    <li>Tüm işlemler cihazınızda yapılır (en yüksek güvenlik)</li>
+                    <li>Veriler şifrelenmiş cihaz depolamasında saklanır</li>
+                    <li>Ağ üzerinden veri aktarımı yapılmaz</li>
+                    <li>Düzenli güvenlik güncellemeleri</li>
+                    <li>Android güvenlik standartlarına tam uyum</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2><span class="section-icon">📍</span>10. Bölgesel Bilgiler</h2>
+                <ul>
+                    <li><strong>Konum Verileri:</strong> Uygulamamamız konum izni talep etmez ve konum verisi toplamaz</li>
+                    <li><strong>Veri Transfer Edilmez:</strong> Verileriniz herhangi bir ülkeye veya sunucuya aktarılmaz</li>
+                    <li><strong>Bulut Yedekleme:</strong> Yalnızca siz etkinleştirirseniz, cihazınızın kendi bulut hizmeti (örn: Google Drive) otomatik senkronizasyon yapabilir</li>
+                </ul>
+            </section>
+
+            <div class="contact-box">
+                <h3>📧 İletişim</h3>
+                <p>Gizlilik politikamız hakkında sorularınız, haklarınızı kullanmak istediğinizde veya geri bildiriminiz olduğunda bizimle iletişime geçebilirsiniz:</p>
+                <p><strong>E-posta:</strong> <a href="mailto:quickscanpdf@gmail.com">quickscanpdf@gmail.com</a></p>
+                <p><strong>Uygulama:</strong> QuickScan PDF</p>
+                <p><strong>Geliştirici:</strong> QuickScan Team</p>
+                <p style="margin-top: 20px; font-size: 0.95em; opacity: 0.9;">Genellikle 48 saat içinde yanıt veriyoruz.</p>
+            </div>
         </div>
+
+        <footer>
+            <p><strong>QuickScan PDF</strong> - Gizliliğinize saygı duyan belge tarama uygulaması</p>
+            <p style="margin-top: 10px; opacity: 0.8;">© 2025 QuickScan PDF. Tüm hakları saklıdır.</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">
+                <a href="#" style="color: #fff; text-decoration: none; margin: 0 10px;">Ana Sayfa</a> | 
+                <a href="#" style="color: #fff; text-decoration: none; margin: 0 10px;">Gizlilik Politikası</a> | 
+                <a href="#" style="color: #fff; text-decoration: none; margin: 0 10px;">Kullanım Şartları</a>
+            </p>
+        </footer>
     </div>
 </body>
 </html>
