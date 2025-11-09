@@ -5,35 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gizlilik Politikası</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            color: #333;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        h1 { color: #2c3e50; }
-        h2 { color: #34495e; margin-top: 30px; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-height: 100vh;
+        }
+        
+        header {
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .last-updated {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        h2 {
+            color: #34495e;
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+        
+        h3 {
+            color: #555;
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .contact-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #4a90e2;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        .contact-box h3 {
+            margin-top: 0;
+            color: #4a90e2;
+        }
+        
+        a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Gizlilik Politikası</h1>
-    <p><strong>Son Güncelleme:</strong> [Tarih]</p>
-    
-    <h2>1. Toplanan Bilgiler</h2>
-    <p>Uygulamamız/web sitemiz aşağıdaki bilgileri toplar...</p>
-    
-    <h2>2. Bilgilerin Kullanımı</h2>
-    <p>Toplanan bilgiler şu amaçlarla kullanılır...</p>
-    
-    <h2>3. Çerezler</h2>
-    <p>Web sitemiz çerez kullanımı hakkında...</p>
-    
-    <h2>4. Üçüncü Taraf Hizmetleri</h2>
-    <p>Kullandığımız üçüncü taraf hizmetler...</p>
-    
-    <h2>5. İletişim</h2>
-    <p>Email: [email@adresiniz.com]</p>
+    <div class="container">
+        <header>
+            <h1>Gizlilik Politikası</h1>
+            <p class="last-updated">Son Güncelleme: 9 Kasım 2025</p>
+        </header>
+
+        <section>
+            <p>Bu gizlilik politikası, hizmetimizi kullanırken toplanan, kullanılan ve paylaşılan kişisel bilgilerinizin nasıl işlendiğini açıklamaktadır.</p>
+        </section>
+
+        <section>
+            <h2>1. Toplanan Bilgiler</h2>
+            <p>Hizmetimizi kullanırken aşağıdaki bilgiler toplanabilir:</p>
+            <ul>
+                <li><strong>Kişisel Bilgiler:</strong> Ad, e-posta adresi gibi kimliğinizi belirleyebilecek bilgiler</li>
+                <li><strong>Kullanım Verileri:</strong> IP adresi, tarayıcı türü, ziyaret edilen sayfalar, ziyaret süresi gibi otomatik olarak toplanan bilgiler</li>
+                <li><strong>Çerezler:</strong> Tarayıcınızda saklanan küçük veri dosyaları</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Bilgilerin Kullanımı</h2>
+            <p>Toplanan bilgiler aşağıdaki amaçlarla kullanılır:</p>
+            <ul>
+                <li>Hizmetlerimizi sağlamak ve sürdürmek</li>
+                <li>Kullanıcı deneyimini geliştirmek</li>
+                <li>İletişim kurmak ve destek sağlamak</li>
+                <li>Güvenlik ve dolandırıcılığı önlemek</li>
+                <li>Yasal yükümlülükleri yerine getirmek</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Çerezler ve İzleme Teknolojileri</h2>
+            <p>Web sitemiz, kullanıcı deneyimini iyileştirmek için çerezler kullanmaktadır. Çerezler şunlar için kullanılır:</p>
+            <ul>
+                <li>Oturum bilgilerini hatırlamak</li>
+                <li>Kullanıcı tercihlerini kaydetmek</li>
+                <li>Site trafiğini analiz etmek</li>
+            </ul>
+            <p>Tarayıcı ayarlarınızdan çerezleri devre dışı bırakabilirsiniz, ancak bu bazı özelliklerin çalışmamasına neden olabilir.</p>
+        </section>
+
+        <section>
+            <h2>4. Bilgilerin Paylaşımı</h2>
+            <p>Kişisel bilgileriniz aşağıdaki durumlar dışında üçüncü taraflarla paylaşılmaz:</p>
+            <ul>
+                <li>Açık izniniz olduğunda</li>
+                <li>Yasal zorunluluklar gereği</li>
+                <li>Hizmet sağlayıcılarımızla (sadece gerekli olduğu ölçüde)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Üçüncü Taraf Hizmetleri</h2>
+            <p>Hizmetimiz, kendi gizlilik politikalarına sahip üçüncü taraf hizmetleri içerebilir:</p>
+            <ul>
+                <li>Google Analytics (analitik)</li>
+                <li>Bulut depolama sağlayıcıları</li>
+            </ul>
+            <p>Bu hizmetlerin gizlilik politikalarını incelemenizi öneririz.</p>
+        </section>
+
+        <section>
+            <h2>6. Veri Güvenliği</h2>
+            <p>Kişisel bilgilerinizin güvenliğini sağlamak için endüstri standardı güvenlik önlemleri alıyoruz. Ancak, internet üzerinden veri iletiminin tamamen güvenli olduğunu garanti edemeyiz.</p>
+        </section>
+
+        <section>
+            <h2>7. Çocukların Gizliliği</h2>
+            <p>Hizmetimiz 13 yaşından küçük çocuklara yönelik değildir. Bilerek 13 yaşından küçük çocuklardan kişisel bilgi toplamayız.</p>
+        </section>
+
+        <section>
+            <h2>8. Kullanıcı Hakları</h2>
+            <p>KVKK ve GDPR kapsamında aşağıdaki haklara sahipsiniz:</p>
+            <ul>
+                <li>Kişisel verilerinize erişim hakkı</li>
+                <li>Verilerin düzeltilmesini talep etme hakkı</li>
+                <li>Verilerin silinmesini isteme hakkı</li>
+                <li>Veri işlemeye itiraz etme hakkı</li>
+                <li>Veri taşınabilirliği hakkı</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>9. Değişiklikler</h2>
+            <p>Bu gizlilik politikasını zaman zaman güncelleyebiliriz. Değişiklikler bu sayfada yayınlanacak ve "Son Güncelleme" tarihi değiştirilecektir.</p>
+        </section>
+
+        <div class="contact-box">
+            <h3>10. İletişim</h3>
+            <p>Gizlilik politikamız hakkında sorularınız varsa, lütfen bizimle iletişime geçin:</p>
+            <p><strong>E-posta:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+        </div>
+    </div>
 </body>
 </html>
